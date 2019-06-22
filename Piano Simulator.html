@@ -6,6 +6,7 @@
             *{
                 margin:0px;
                 font-family: 'Josefin Sans', sans-serif;
+                background-color:aliceblue;
             }
             h1{
                 text-align:center;
@@ -23,29 +24,43 @@
                 width:30%;
                 padding:20px;
                 font-size:50px;
+                background-color:white;
             }
             a{
                 color:black;
                 text-decoration:none;
                 transition:0.3s;
+                background-color:white;
             }
             a:hover{
                 color:cornflowerblue;
-            }
-            skeyboard{
-                display:flex;
-                flex-direction: row;
-                border-bottom:5px black solid;
             }
             .white_key{
                 border:5px black solid;
                 width:6%;
                 height:400px;
+                background-color:white;
             }
             .black_key{
+                border:5px black solid;
                 width:3%;
                 height:300px;
                 background-color:black;
+                margin:0 auto;
+                position:relative;
+                bottom:410px;
+            }
+            .black_one{
+                display:inline;
+                margin-left: 20px;
+            }
+            .fillin{
+                background-color:transparent;
+                border:5px transparent solid;
+            }
+            #black_keyboard{
+                width:1200px;
+                margin:0 auto;
             }
         </style>
     </head>
@@ -81,32 +96,38 @@
         <audio class="soundFile" id="As"><source src="Sounds/As.wav" type="audio/wav" ></audio>
         <audio class="soundFile" id="B"><source src="Sounds/B.wav" type="audio/wav" ></audio>
         <audio class="soundFile" id="C"><source src="Sounds/C.wav" type="audio/wav" ></audio>
-        <div id="keyboard">
+        <div id="white_keyboard">
             <div class="white_key key" id="low_C" onclick="playSound(0)"></div>
-            <div class="black_key key" id="C_Sharp" onclick="playSound(1)"></div>
             <div class="white_key key" id="low_D" onclick="playSound(2)"></div>
-            <div class="black_key key" id="low_D_Sharp" onclick="playSound(3)"></div>
             <div class="white_key key" id="low_E" onclick="playSound(4)"></div>
             <div class="white_key key" id="low_F" onclick="playSound(5)"></div>
-            <div class="black_key key" id="low_F_Sharp" onclick="playSound(6)"></div>
             <div class="white_key key" id="low_G" onclick="playSound(7)"></div>
-            <div class="black_key key" id="low_G_Sharp" onclick="playSound(8)"></div>
             <div class="white_key key" id="low_A" onclick="playSound(9)"></div>
-            <div class="black_key key" id="low_A_Sharp" onclick="playSound(0)"></div>
-            <div class="white_key key" id="low_B" onclick="playSound(1)"></div>
-            <div class="white_key key" id="middle_C" onclick="playSound()"></div>
-            <div class="black_key key" id="middle_C_Sharp" onclick="playSound()"></div>
-            <div class="white_key key" id="D" onclick="playSound()"></div>
-            <div class="black_key key" id="D_Sharp" onclick="playSound()"></div>
-            <div class="white_key key" id="E" onclick="playSound()"></div>
-            <div class="white_key key" id="F" onclick="playSound()"></div>
-            <div class="black_key key" id="F_Sharp" onclick="playSound()"></div>
-            <div class="white_key key" id="G" onclick="playSound()"></div>
-            <div class="black_key key" id="G_Sharp" onclick="playSound()"></div>
-            <div class="white_key key" id="A" onclick="playSound()"></div>
-            <div class="black_key key" id="A_Sharp" onclick="playSound()"></div>
-            <div class="white_key key" id="B" onclick="playSound()"></div>
-            <div class="white_key key" id="C" onclick="playSound()"></div>
+            <div class="white_key key" id="low_B" onclick="playSound(11)"></div>
+            <div class="white_key key" id="middle_C" onclick="playSound(12)"></div>
+            <div class="white_key key" id="D" onclick="playSound(14)"></div>
+            <div class="white_key key" id="E" onclick="playSound(16)"></div>
+            <div class="white_key key" id="F" onclick="playSound(17)"></div>
+            <div class="white_key key" id="G" onclick="playSound(19)"></div>
+            <div class="white_key key" id="A" onclick="playSound(21)"></div>
+            <div class="white_key key" id="B" onclick="playSound(23)"></div>
+            <div class="white_key key" id="C" onclick="playSound(24)"></div>
+        </div>
+        <div id="black_keyboard">
+            <div class="black_key key" id="C_Sharp" onclick="playSound(1)"></div>
+            <div class="black_key key" id="low_D_Sharp" onclick="playSound(3)"></div>
+            <div class="black_key fillin"></div>
+            <div class="black_key key" id="low_F_Sharp" onclick="playSound(6)"></div>
+            <div class="black_key key" id="low_G_Sharp" onclick="playSound(8)"></div>
+            <div class="black_key key" id="low_A_Sharp" onclick="playSound(10)"></div>
+            <div class="black_key fillin"></div>
+            <div class="black_key key" id="middle_C_Sharp" onclick="playSound(13)"></div>
+            <div class="black_key key" id="D_Sharp" onclick="playSound(15)"></div>
+            <div class="black_key fillin"></div>
+            <div class="black_key key" id="F_Sharp" onclick="playSound(18)"></div>
+            <div class="black_key key" id="G_Sharp" onclick="playSound(20)"></div>
+            <div class="black_key key" id="A_Sharp" onclick="playSound(22)"></div>
+            <div class="black_key fillin"></div>
         </div>
         <script>
             var audioSource = document.getElementsByClassName("soundFile");
