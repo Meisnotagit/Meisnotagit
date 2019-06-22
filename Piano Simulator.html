@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <title>Piano Simulator</title>
+        <style>
+            *{
+                margin:0px;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+            h1{
+                text-align:center;
+                font-size:90px;
+                border:10px black solid;
+                padding:40px;
+                background:cornflowerblue;
+            }
+            div{
+                display:flex;
+                flex-direction:row;
+            }
+            h2{
+                text-align:center;
+                width:30%;
+                padding:20px;
+                font-size:50px;
+            }
+            a{
+                color:black;
+                text-decoration:none;
+                transition:0.3s;
+            }
+            a:hover{
+                color:cornflowerblue;
+            }
+            skeyboard{
+                display:flex;
+                flex-direction: row;
+                border-bottom:5px black solid;
+            }
+            .white_key{
+                border:5px black solid;
+                width:6%;
+                height:400px;
+            }
+            .black_key{
+                width:3%;
+                height:300px;
+                background-color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Play the Piano!</h1>
+        <div>
+            <h2><a href="index.html">Home Page</a></h2>
+            <h2><a href="About the Piano.html">About the Piano</a></h2>
+            <h2><a href="Tutorial.html">Tutorial</a></h2>
+        </div>
+        <audio class="soundFile" id="LowC"><source src="Sounds/LowC.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowCs"><source src="Sounds/LowCs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowD"><source src="Sounds/LowD.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowDs"><source src="Sounds/LowDs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowE"><source src="Sounds/LowE.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowF"><source src="Sounds/LowF.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowFs"><source src="Sounds/LowFs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowG"><source src="Sounds/LowG.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowGs"><source src="Sounds/LowGs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowA"><source src="Sounds/LowA.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowAs"><source src="Sounds/LowAs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="LowB"><source src="Sounds/LowB.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="MiddleC"><source src="Sounds/MiddleC.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="Cs"><source src="Sounds/Cs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="D"><source src="Sounds/D.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="Ds"><source src="Sounds/Ds.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="E"><source src="Sounds/E.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="F"><source src="Sounds/F.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="Fs"><source src="Sounds/Fs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="G"><source src="Sounds/G.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="Gs"><source src="Sounds/Gs.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="A"><source src="Sounds/A.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="As"><source src="Sounds/As.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="B"><source src="Sounds/B.wav" type="audio/wav" ></audio>
+        <audio class="soundFile" id="C"><source src="Sounds/C.wav" type="audio/wav" ></audio>
+        <div id="keyboard">
+            <div class="white_key key" id="low_C" onclick="playSound(0)"></div>
+            <div class="black_key key" id="C_Sharp" onclick="playSound(1)"></div>
+            <div class="white_key key" id="low_D" onclick="playSound(2)"></div>
+            <div class="black_key key" id="low_D_Sharp" onclick="playSound(3)"></div>
+            <div class="white_key key" id="low_E" onclick="playSound(4)"></div>
+            <div class="white_key key" id="low_F" onclick="playSound(5)"></div>
+            <div class="black_key key" id="low_F_Sharp" onclick="playSound(6)"></div>
+            <div class="white_key key" id="low_G" onclick="playSound(7)"></div>
+            <div class="black_key key" id="low_G_Sharp" onclick="playSound(8)"></div>
+            <div class="white_key key" id="low_A" onclick="playSound(9)"></div>
+            <div class="black_key key" id="low_A_Sharp" onclick="playSound(0)"></div>
+            <div class="white_key key" id="low_B" onclick="playSound(1)"></div>
+            <div class="white_key key" id="middle_C" onclick="playSound()"></div>
+            <div class="black_key key" id="middle_C_Sharp" onclick="playSound()"></div>
+            <div class="white_key key" id="D" onclick="playSound()"></div>
+            <div class="black_key key" id="D_Sharp" onclick="playSound()"></div>
+            <div class="white_key key" id="E" onclick="playSound()"></div>
+            <div class="white_key key" id="F" onclick="playSound()"></div>
+            <div class="black_key key" id="F_Sharp" onclick="playSound()"></div>
+            <div class="white_key key" id="G" onclick="playSound()"></div>
+            <div class="black_key key" id="G_Sharp" onclick="playSound()"></div>
+            <div class="white_key key" id="A" onclick="playSound()"></div>
+            <div class="black_key key" id="A_Sharp" onclick="playSound()"></div>
+            <div class="white_key key" id="B" onclick="playSound()"></div>
+            <div class="white_key key" id="C" onclick="playSound()"></div>
+        </div>
+        <script>
+            var audioSource = document.getElementsByClassName("soundFile");
+            var keys = document.getElementsByClassName('key');
+
+            function playSound(audioNum){
+                audioSource[audioNum].currentTime = 0
+                audioSource[audioNum].play();
+            }
+        </script>
+    </body>
+</html>
