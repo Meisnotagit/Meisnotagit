@@ -57,6 +57,7 @@
             .fillin{
                 background-color:transparent;
                 border:5px transparent solid;
+                position:relative;
             }
             #black_keyboard{
                 width:1200px;
@@ -141,18 +142,18 @@
         <div id="black_keyboard">
             <div class="black_key key" id="C_Sharp" onclick="playSound(1)"><h5>C#</h5></div>
             <div class="black_key key" id="low_D_Sharp" onclick="playSound(3)"><h5>D#</h5></div>
-            <div class="black_key fillin"></div>
+            <div class="black_key fillin" style="z-index:-1;"></div>
             <div class="black_key key" id="low_F_Sharp" onclick="playSound(6)"><h5>F#</h5></div>
             <div class="black_key key" id="low_G_Sharp" onclick="playSound(8)"><h5>G#</h5></div>
             <div class="black_key key" id="low_A_Sharp" onclick="playSound(10)"><h5>A#</h5></div>
-            <div class="black_key fillin"></div>
+            <div class="black_key fillin" style="z-index:-2;"></div>
             <div class="black_key key" id="middle_C_Sharp" onclick="playSound(13)"><h5>C#</h5></div>
             <div class="black_key key" id="D_Sharp" onclick="playSound(15)"><h5>D#</h5></div>
-            <div class="black_key fillin"></div>
+            <div class="black_key fillin" style="z-index:-3;"></div>
             <div class="black_key key" id="F_Sharp" onclick="playSound(18)"><h5>F#</h5></div>
             <div class="black_key key" id="G_Sharp" onclick="playSound(20)"><h5>G#</h5></div>
             <div class="black_key key" id="A_Sharp" onclick="playSound(22)"><h5>A#</h5></div>
-            <div class="black_key fillin"></div>
+            <div class="black_key fillin" style="z-index:-4;"></div>
         </div>
         <script>
             var audioSource = document.getElementsByClassName("soundFile");
